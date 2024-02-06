@@ -52,6 +52,7 @@ class Perceptron():
         self.final_weights = current_weight
         
         self.show_graphics()
+        self.show_resume()
         return "¡Hecho!"
     
     def read_csv(self, path):
@@ -80,3 +81,6 @@ class Perceptron():
 
         pl.tight_layout()
         pl.show()
+
+    def show_resume(self):
+        print(f'\n-#-#- RESUMEN DE LA EJECUCIÓN -#-#-\n\t* Pesos Iniciales:\n {self.initials_weights}\n\t* Tasa de aprendizaje: {self.learnig_rate}\n\t* Error Permisible: {self.permisible_error}\n\t* Iteraciones totales: {self.iterations_number}')
